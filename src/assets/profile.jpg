@@ -1,0 +1,5 @@
+<img
+  src={profileImage}
+  alt="Piserla Srinivas Reddy"
+  className="absolute inset-0 h-full w-full object-cover"
+/>
