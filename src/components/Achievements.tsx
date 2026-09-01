@@ -6,7 +6,8 @@ const achievements = [
     organization: "LeetCode",
     description:
       "Solved 70+ problems on LeetCode, demonstrating strong algorithmic thinking and problem-solving abilities across various difficulty levels.",
-    typeStyle: "bg-pink-50 text-pink-500",
+    typeStyle:
+      "bg-pink-50 text-pink-500 dark:bg-pink-500/10 dark:text-pink-400",
   },
   {
     type: "Recognition",
@@ -15,7 +16,8 @@ const achievements = [
     organization: "GeeksForGeeks",
     description:
       "Achieved Rank 8 in GeeksForGeeks Practice in my institution, solving over 200 DSA problems and demonstrating strong problem-solving skills.",
-    typeStyle: "bg-cyan-50 text-cyan-500",
+    typeStyle:
+      "bg-cyan-50 text-cyan-500 dark:bg-cyan-500/10 dark:text-cyan-400",
   },
   {
     type: "Recognition",
@@ -24,7 +26,8 @@ const achievements = [
     organization: "GeeksForGeeks",
     description:
       "Received Goodies for doing Problem of the Day (POTD) consistently over 120 days, demonstrating dedication to continuous learning and problem-solving.",
-    typeStyle: "bg-cyan-50 text-cyan-500",
+    typeStyle:
+      "bg-cyan-50 text-cyan-500 dark:bg-cyan-500/10 dark:text-cyan-400",
   },
   {
     type: "Achievement",
@@ -33,7 +36,8 @@ const achievements = [
     organization: "Google Developer Student Club",
     description:
       "Led a vibrant 5-day college boot camp initiated by students, dedicated to educating and guiding fellow peers and juniors through immersive education and mentorship.",
-    typeStyle: "bg-gray-100 text-gray-600",
+    typeStyle:
+      "bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300",
   },
   {
     type: "Open Source",
@@ -42,7 +46,8 @@ const achievements = [
     organization: "DigitalOcean",
     description:
       "Successfully contributed to Hacktoberfest 2022, earning badges and contributing to open-source projects while learning new technologies.",
-    typeStyle: "bg-orange-50 text-orange-500",
+    typeStyle:
+      "bg-orange-50 text-orange-500 dark:bg-orange-500/10 dark:text-orange-400",
   },
 ];
 
@@ -50,33 +55,80 @@ function Achievements() {
   return (
     <section
       id="achievements"
-      className="w-full bg-white py-12 sm:py-16"
+      className="
+        w-full
+        bg-white
+        py-12
+        text-gray-900
+        transition-colors
+        duration-500
+        sm:py-16
+        dark:bg-slate-950
+        dark:text-white
+      "
     >
       <div className="mx-auto w-full max-w-[1140px] px-5 sm:px-6">
 
-        
+        {/* Section Heading */}
         <div className="mb-20 text-center">
-          <h2 className="text-4xl font-bold text-black sm:text-5xl lg:text-6xl">
+
+          <h2
+            className="
+              text-3xl
+              font-bold
+              text-gray-950
+              transition-colors
+              duration-300
+              sm:text-4xl
+              lg:text-5xl
+              dark:text-white
+            "
+          >
             Achievements &amp; Awards
           </h2>
 
-          <p className="mt-4 text-lg text-gray-500 sm:text-xl">
+          <p
+            className="
+              mt-4
+              text-lg
+              text-gray-500
+              transition-colors
+              duration-300
+              sm:text-xl
+              dark:text-gray-400
+            "
+          >
             Milestones and recognitions
           </p>
+
         </div>
 
-        
-        <div className="mb-8 flex items-center gap-3">
+
+        {/* Featured Achievements Heading */}
+        <div className="mb-5 flex items-center gap-3">
+
           <span className="text-3xl text-yellow-500">
             ★
           </span>
 
-          <h3 className="text-2xl font-bold text-black sm:text-3xl">
+          <h3
+            className="
+              text-xl
+              font-bold
+              text-gray-950
+              transition-colors
+              duration-300
+              sm:text-2xl
+              dark:text-white
+            "
+          >
             Featured Achievements
           </h3>
+
         </div>
 
-        
+
+        {/* Achievement Cards */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
 
           {achievements.map((achievement, index) => (
@@ -93,10 +145,15 @@ function Achievements() {
                 hover:-translate-y-1
                 hover:shadow-lg
                 sm:p-8
+
+                dark:border-slate-800
+                dark:bg-slate-900
+                dark:hover:border-slate-700
+                dark:hover:bg-slate-800
               "
             >
 
-              
+              {/* Type + Date */}
               <div className="mb-6 flex flex-wrap items-center gap-3">
 
                 <span
@@ -104,7 +161,7 @@ function Achievements() {
                     rounded-full
                     px-3
                     py-1
-                    text-sm
+                    text-xs
                     font-medium
                     ${achievement.typeStyle}
                   `}
@@ -112,69 +169,93 @@ function Achievements() {
                   {achievement.type}
                 </span>
 
-                <span className="text-base text-gray-500">
+                <span
+                  className="
+                    text-sm
+                    text-gray-500
+                    transition-colors
+                    duration-300
+                    dark:text-gray-400
+                  "
+                >
                   {achievement.date}
                 </span>
 
               </div>
 
-              
+
+              {/* Title */}
               <h4
                 className="
-                  text-2xl
+                  text-xl
                   font-medium
                   leading-tight
-                  text-black
-                  sm:text-[26px]
+                  text-gray-950
+                  transition-colors
+                  duration-300
+                  sm:text-[22px]
+                  dark:text-white
                 "
               >
                 {achievement.title}
               </h4>
 
-          
+
+              {/* Organization */}
               <p
                 className="
-                  mt-4
+                  mt-2
                   text-lg
                   font-semibold
-                  text-black
+                  text-gray-950
+                  transition-colors
+                  duration-300
+                  dark:text-gray-100
                 "
               >
                 {achievement.organization}
               </p>
 
-              
+
+              {/* Description */}
               <p
                 className="
-                  mt-5
+                  mt-3
                   text-base
                   leading-7
                   text-gray-500
-                  sm:text-lg
+                  transition-colors
+                  duration-300
+                  sm:text-sm
                   sm:leading-8
+                  dark:text-gray-400
                 "
               >
                 {achievement.description}
               </p>
 
-            
+
+              {/* Learn More */}
               <button
                 type="button"
                 className="
-                  mt-7
+                  mt-5
                   inline-flex
                   items-center
                   gap-2
-                  text-base
+                  text-sm
                   font-medium
-                  text-black
-                  transition
+                  text-gray-950
+                  transition-all
+                  duration-200
+                  hover:gap-3
                   hover:underline
+                  dark:text-white
                 "
               >
                 Learn More
 
-                <span className="text-lg">
+                <span className="text-sm">
                   ↗
                 </span>
               </button>
@@ -183,6 +264,7 @@ function Achievements() {
           ))}
 
         </div>
+
       </div>
     </section>
   );

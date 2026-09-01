@@ -64,13 +64,22 @@ function ProjectCard({
   return (
     <div
       className={`
-        flex h-full flex-col rounded-xl border border-gray-200
-        bg-white p-4
-        transition-all duration-300
+        flex
+        h-full
+        flex-col
+        rounded-xl
+        border
+        border-gray-200
+        bg-white
+        p-4
+        transition-all
+        duration-300
         hover:-translate-y-1
+        dark:border-gray-700
+        dark:bg-gray-900
         ${
           featured
-            ? "shadow-[0_18px_35px_rgba(0,0,0,0.12)]"
+            ? "shadow-[0_18px_35px_rgba(0,0,0,0.12)] dark:shadow-[0_18px_35px_rgba(0,0,0,0.35)]"
             : "shadow-none"
         }
       `}
@@ -78,20 +87,50 @@ function ProjectCard({
 
       {/* Category */}
       <div>
-        <span className="inline-block rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-700">
+        <span
+          className="
+            inline-block
+            rounded-full
+            bg-gray-100
+            px-2.5
+            py-1
+            text-xs
+            font-medium
+            text-gray-700
+            dark:bg-gray-800
+            dark:text-gray-300
+          "
+        >
           {project.category}
         </span>
       </div>
 
 
       {/* Project Title */}
-      <h3 className="mt-4 text-xl font-semibold text-gray-900">
+      <h3
+        className="
+          mt-4
+          text-xl
+          font-semibold
+          text-gray-900
+          dark:text-white
+        "
+      >
         {project.title}
       </h3>
 
 
       {/* Description */}
-      <p className="mt-3 min-h-[48px] text-sm leading-5 text-gray-500">
+      <p
+        className="
+          mt-3
+          min-h-[48px]
+          text-sm
+          leading-5
+          text-gray-500
+          dark:text-gray-400
+        "
+      >
         {project.description}
       </p>
 
@@ -102,7 +141,17 @@ function ProjectCard({
         {project.technologies.map((technology, index) => (
           <span
             key={index}
-            className="rounded-full bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-800"
+            className="
+              rounded-full
+              bg-gray-100
+              px-2.5
+              py-1
+              text-xs
+              font-medium
+              text-gray-800
+              dark:bg-gray-800
+              dark:text-gray-300
+            "
           >
             {technology}
           </span>
@@ -129,6 +178,9 @@ function ProjectCard({
             text-white
             transition
             hover:bg-black
+            dark:bg-white
+            dark:text-gray-900
+            dark:hover:bg-gray-200
           "
         >
           Live Demo
@@ -150,6 +202,10 @@ function ProjectCard({
             text-gray-800
             transition
             hover:bg-gray-50
+            dark:border-gray-700
+            dark:bg-gray-900
+            dark:text-gray-200
+            dark:hover:bg-gray-800
           "
         >
           GitHub
@@ -166,13 +222,20 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="w-full bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      className="
+        w-full
+        bg-white
+        px-4
+        py-16
+        sm:px-6
+        sm:py-20
+        lg:px-8
+        lg:py-24
+        dark:bg-gray-950
+      "
     >
 
-      {/* ================================
-          SECTION HEADER
-      ================================= */}
-
+      {/* SECTION HEADER */}
       <div className="mx-auto max-w-4xl text-center">
 
         <h2
@@ -183,6 +246,7 @@ function Projects() {
             text-black
             sm:text-4xl
             lg:text-5xl
+            dark:text-white
           "
         >
           Featured Projects
@@ -194,6 +258,7 @@ function Projects() {
             text-lg
             text-gray-500
             sm:text-xl
+            dark:text-gray-400
           "
         >
           Some of my best work
@@ -202,10 +267,7 @@ function Projects() {
       </div>
 
 
-      {/* ================================
-          PROJECT CARDS
-      ================================= */}
-
+      {/* PROJECT CARDS */}
       <div
         className="
           mx-auto
@@ -217,7 +279,6 @@ function Projects() {
           sm:mt-16
           md:grid-cols-2
           lg:grid-cols-3
-          h-10
         "
       >
 

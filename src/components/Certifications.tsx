@@ -74,26 +74,27 @@ const certifications: Certification[] = [
   },
 
   {
-  date: "May 15, 2022",
-  title: "MongoDB Certified Developer Associate",
-  description:
-    "Certification validating skills in MongoDB database development, schema design, and aggregation framework.",
-  organization: "MongoDB Inc.",
-  skills: ["MongoDB", "Node.js"],
-  credentialId: "MONGO-DA-97531-2022",
-  validUntil: "May 15, 2025 (Expired)",
-},
+    date: "May 15, 2022",
+    title: "MongoDB Certified Developer Associate",
+    description:
+      "Certification validating skills in MongoDB database development, schema design, and aggregation framework.",
+    organization: "MongoDB Inc.",
+    skills: ["MongoDB", "Node.js"],
+    credentialId: "MONGO-DA-97531-2022",
+    validUntil: "May 15, 2025 (Expired)",
+  },
 
-{
-  date: "December 5, 2021",
-  title: "Deep Learning Specialization",
-  description:
-    "5-course specialization covering neural networks, deep learning, convolutional networks, sequence models, and hyperparameter tuning.",
-  organization: "DeepLearning.AI & Coursera",
-  skills: ["TensorFlow", "Python"],
-  credentialId: "DL-SPEC-75319-2021",
-},
+  {
+    date: "December 5, 2021",
+    title: "Deep Learning Specialization",
+    description:
+      "5-course specialization covering neural networks, deep learning, convolutional networks, sequence models, and hyperparameter tuning.",
+    organization: "DeepLearning.AI & Coursera",
+    skills: ["TensorFlow", "Python"],
+    credentialId: "DL-SPEC-75319-2021",
+  },
 ];
+
 
 function CertificationCard({
   certification,
@@ -108,18 +109,17 @@ function CertificationCard({
         bg-white
         p-3
         shadow-[0_12px_30px_rgba(0,0,0,0.12)]
-        sm:p-4
-
         transition-all
         duration-500
         ease-out
-
         hover:-translate-y-2
         hover:translate-x-2
         hover:shadow-[0_25px_45px_rgba(0,0,0,0.18)]
+        dark:bg-slate-900
       "
     >
-    
+
+      {/* Certificate */}
       <div
         className="
           relative
@@ -127,11 +127,11 @@ function CertificationCard({
           overflow-hidden
           border
           border-[#b8860b]
-          bg-[#1b1b21]
+          bg-white
           px-5
           py-7
           text-center
-          text-white
+          text-gray-900
 
           sm:min-h-[540px]
           sm:px-7
@@ -140,9 +140,13 @@ function CertificationCard({
           lg:min-h-[575px]
           lg:px-8
           lg:py-9
+
+          dark:bg-[#1b1b21]
+          dark:text-white
         "
       >
-        
+
+        {/* Top Left Corner */}
         <div
           className="
             absolute
@@ -171,7 +175,8 @@ function CertificationCard({
           />
         </div>
 
-        
+
+        {/* Top Right Corner */}
         <div
           className="
             absolute
@@ -201,6 +206,7 @@ function CertificationCard({
         </div>
 
 
+        {/* Bottom Left Corner */}
         <div
           className="
             absolute
@@ -229,7 +235,8 @@ function CertificationCard({
           />
         </div>
 
-    
+
+        {/* Bottom Right Corner */}
         <div
           className="
             absolute
@@ -257,28 +264,32 @@ function CertificationCard({
             "
           />
         </div>
+
 
         {/* Date */}
         <p
           className="
             mt-2
             text-xs
-            text-gray-300
+            text-gray-500
 
             sm:mt-3
             sm:text-sm
+
+            dark:text-gray-300
           "
         >
           {certification.date}
         </p>
 
-        
+
+        {/* Certificate */}
         <p
           className="
             mt-5
             text-lg
             font-bold
-            text-[#e0a800]
+            text-[#b8860b]
 
             sm:mt-6
             sm:text-xl
@@ -287,12 +298,13 @@ function CertificationCard({
           CERTIFICATE
         </p>
 
+
         <p
           className="
             mt-1
             text-xs
             italic
-            text-[#e0a800]
+            text-[#b8860b]
 
             sm:text-sm
           "
@@ -301,6 +313,7 @@ function CertificationCard({
         </p>
 
 
+        {/* Title */}
         <h3
           className="
             mx-auto
@@ -309,18 +322,21 @@ function CertificationCard({
             text-2xl
             font-bold
             leading-tight
-            text-white
+            text-gray-900
 
             sm:mt-7
             sm:text-3xl
 
             lg:text-[32px]
+
+            dark:text-white
           "
         >
           {certification.title}
         </h3>
 
-    
+
+        {/* Description */}
         <p
           className="
             mx-auto
@@ -328,32 +344,38 @@ function CertificationCard({
             max-w-[500px]
             text-sm
             leading-6
-            text-gray-300
+            text-gray-600
 
             sm:mt-8
             sm:text-[15px]
             sm:leading-6
+
+            dark:text-gray-300
           "
         >
           {certification.description}
         </p>
 
-        
+
+        {/* Organization */}
         <h4
           className="
             mt-7
             text-xl
             font-bold
-            text-white
+            text-gray-900
 
             sm:mt-8
             sm:text-2xl
+
+            dark:text-white
           "
         >
           {certification.organization}
         </h4>
 
-        
+
+        {/* Skills */}
         <div
           className="
             mt-5
@@ -369,12 +391,15 @@ function CertificationCard({
               className="
                 border
                 border-[#8f6700]
-                bg-[#6f5000]/20
+                bg-[#6f5000]/10
                 px-3
                 py-1.5
                 text-xs
                 font-semibold
-                text-[#e0a800]
+                text-[#a87500]
+
+                dark:bg-[#6f5000]/20
+                dark:text-[#e0a800]
               "
             >
               {skill}
@@ -382,36 +407,62 @@ function CertificationCard({
           ))}
         </div>
 
-    
+
+        {/* Valid Until */}
         {certification.validUntil && (
           <p
             className="
               mt-5
               text-xs
-              text-gray-400
+              text-gray-500
 
               sm:text-sm
+
+              dark:text-gray-400
             "
           >
             Valid Until:{" "}
-            <span className="font-semibold text-gray-200">
+            <span
+              className="
+                font-semibold
+                text-gray-700
+                dark:text-gray-200
+              "
+            >
               {certification.validUntil}
             </span>
           </p>
         )}
 
-        
+
+        {/* Credential */}
         <div className="mt-5">
-          <p className="text-[11px] text-gray-500">
+
+          <p
+            className="
+              text-[11px]
+              text-gray-400
+              dark:text-gray-500
+            "
+          >
             Credential ID:
           </p>
 
-          <p className="mt-1 text-[11px] text-gray-300">
+          <p
+            className="
+              mt-1
+              text-[11px]
+              text-gray-600
+              dark:text-gray-300
+            "
+          >
             {certification.credentialId}
           </p>
+
         </div>
 
-        
+
+        {/* Divider */}
         <div
           className="
             mx-auto
@@ -422,7 +473,8 @@ function CertificationCard({
           "
         />
 
-    
+
+        {/* Verify */}
         <button
           type="button"
           className="
@@ -433,7 +485,6 @@ function CertificationCard({
             text-sm
             font-medium
             text-black
-
             transition
             duration-200
             hover:bg-[#f2bd00]
@@ -441,10 +492,12 @@ function CertificationCard({
         >
           Verify Credential ↗
         </button>
+
       </div>
     </div>
   );
 }
+
 
 function Certifications() {
   return (
@@ -455,27 +508,34 @@ function Certifications() {
         bg-white
         px-4
         py-16
+        transition-colors
+        duration-500
 
         sm:px-6
         sm:py-20
 
         lg:px-8
         lg:py-24
+
+        dark:bg-slate-950
       "
     >
-    
+
+      {/* Heading */}
       <div className="mx-auto max-w-4xl text-center">
+
         <h2
           className="
             text-4xl
             font-bold
             tracking-tight
-            text-black
+            text-gray-900
 
             sm:text-5xl
 
             lg:text-6xl
-            pt-35
+
+            dark:text-white
           "
         >
           Certifications
@@ -488,11 +548,15 @@ function Certifications() {
             text-gray-500
 
             sm:text-xl
+
+            dark:text-gray-400
           "
         >
           Professional credentials and certifications
         </p>
+
       </div>
+
 
       {/* Certificate Grid */}
       <div
@@ -512,13 +576,16 @@ function Certifications() {
           lg:gap-6
         "
       >
+
         {certifications.map((certification) => (
           <CertificationCard
             key={certification.title}
             certification={certification}
           />
         ))}
+
       </div>
+
     </section>
   );
 }

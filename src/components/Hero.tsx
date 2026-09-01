@@ -1,48 +1,318 @@
 import img from "../assets/mani.png";
+
 function Hero() {
     return (
-        <section className="min-h-screen bg-500-white flex w-full max-w-[1200px] mx-auto px-6">
-            <div className="pt-25">
-                <h1 className="text-7xl font-bold text-500-grey ">
-                    Kandadi Manikanth Reddy
-                </h1>
-                <div className=" pt-6 text-4xl pb-6">
-                    I build <span>web applications</span>
-                </div>
-                <p className="text-lg text-500-grey ">
-                    Passionate full-stack developer with 1+ years of experience building corporate solutions and web applications. Specialized in React, Node.js, and modern web technologies with expertise in AI integration and real-time systems.
-                </p>
-                <div>
-                    <div className=" p-4 mt-6 flex gap-4">
-                        <button className="rounded-xl border-1 p-3 "> GitHub </button>
-                        <button className="rounded-xl border-1 p-3 "> Linkedin </button>
-                        <button className="rounded-xl border-1 p-3 "> Twitter </button>
-                        <button className="rounded-xl border-1 p-3 "> Website </button>
-                    </div>
-                </div>
-                <div className="flex gap-4 mt-6 text-sm">
-                    <div>📧 <span>manikanthreddykandadi583@gmail.com</span></div>
-                    <div>📍<span>Hyderabad, India</span></div>
-                    <div>✅<span>open</span></div>
-
-
-                </div>
-            </div>
-            {/* <div>
-                <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh4IameaFM71SBlKIo1AQKy7wp27NnQvddqKriu9FoAfhBeyb4rQrP_iQ&s=10"
-                alt="Manikanth Reddy"
-                className=" pt-50 "
+        <section 
+        id="home"
+            className="
+                relative
+                min-h-screen
+                w-full
+                overflow-hidden
+                flex
+                items-center
+                bg-white
+                dark:bg-gray-950
+            "
+        >
+            {/* Grid Background */}
+            <div
+                className="
+                    absolute
+                    inset-0
+                    z-0
+                    opacity-70
+                    dark:opacity-30
+                    bg-[linear-gradient(to_right,#e5e7eb_1.5px,transparent_1.5px),linear-gradient(to_bottom,#e5e7eb_1.5px,transparent_1.5px)]
+                    bg-[size:65px_65px]
+                    dark:bg-[linear-gradient(to_right,#374151_1.5px,transparent_1.5px),linear-gradient(to_bottom,#374151_1.5px,transparent_1.5px)]
+                "
             />
-           
-            </div> */}
-             <div>
-      <img
-        src={img}
-        alt="Manikanth Reddy"
-        className="w-[400px] h-[550px] object-cover rounded-2xl shadow-xl"
-      />
-    </div>
+
+            {/* Radial Background */}
+            <div
+                className="
+                    absolute
+                    inset-0
+                    z-0
+                    bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.95)_0%,rgba(255,255,255,0.65)_45%,rgba(255,255,255,0.15)_100%)]
+                    dark:bg-[radial-gradient(circle_at_center,rgba(17,24,39,0.95)_0%,rgba(3,7,18,0.8)_50%,rgba(3,7,18,0.5)_100%)]
+                "
+            />
+
+            {/* Main Content */}
+            <div
+                className="
+                    relative
+                    z-10
+                    w-full
+                    max-w-[1400px]
+                    mx-auto
+                    px-6
+                    lg:px-12
+                    py-20
+                    flex
+                    flex-col
+                    lg:flex-row
+                    items-center
+                    justify-between
+                    gap-12
+                "
+            >
+
+                {/* LEFT SIDE */}
+                <div className="w-full lg:w-1/2">
+
+                    {/* Name */}
+                    <h1
+                        className="
+                            text-5xl
+                            sm:text-5xl
+                            lg:text-6xl
+                            font-bold
+                            leading-tight
+                            text-gray-900
+                            dark:text-white
+                        "
+                    >
+                        Kandadi Manikanth Reddy
+                    </h1>
+
+                    {/* I Build */}
+                    <div
+                        className="
+                            pt-6
+                            pb-6
+                            text-2xl
+                            sm:text-3xl
+                            text-gray-500
+                            dark:text-gray-300
+                        "
+                    >
+                        I build{" "}
+
+                        <span
+                            className="
+                                inline-block
+                                rounded-xl
+                                border
+                                border-gray-300
+                                bg-gray-100
+                                px-3
+                                py-1
+                                text-gray-900
+                                font-medium
+                                dark:border-gray-700
+                                dark:bg-gray-800
+                                dark:text-white
+                            "
+                        >
+                            web applications
+                        </span>
+                    </div>
+
+                    {/* Description */}
+                    <p
+                        className="
+                            max-w-[650px]
+                            text-lg
+                            leading-8
+                            text-gray-500
+                            dark:text-gray-400
+                        "
+                    >
+                        Passionate full-stack developer with 1+ years of
+                        experience building corporate solutions and web
+                        applications. Specialized in React, Node.js, and
+                        modern web technologies with expertise in AI
+                        integration and real-time systems.
+                    </p>
+
+                    {/* Social Buttons */}
+                    <div className="mt-8 flex flex-wrap gap-4">
+
+                        <button
+                            className="
+                                rounded-xl
+                                border
+                                border-gray-300
+                                bg-white
+                                px-5
+                                py-2
+                                text-gray-800
+                                transition
+                                hover:bg-gray-100
+                                dark:border-gray-700
+                                dark:bg-gray-900
+                                dark:text-gray-200
+                                dark:hover:bg-gray-800
+                            "
+                        >
+                            GitHub
+                        </button>
+
+                        <button
+                            className="
+                                rounded-xl
+                                border
+                                border-gray-300
+                                bg-white
+                                px-5
+                                py-2
+                                text-gray-800
+                                transition
+                                hover:bg-gray-100
+                                dark:border-gray-700
+                                dark:bg-gray-900
+                                dark:text-gray-200
+                                dark:hover:bg-gray-800
+                            "
+                        >
+                            LinkedIn
+                        </button>
+
+                        <button
+                            className="
+                                rounded-xl
+                                border
+                                border-gray-300
+                                bg-white
+                                px-5
+                                py-2
+                                text-gray-800
+                                transition
+                                hover:bg-gray-100
+                                dark:border-gray-700
+                                dark:bg-gray-900
+                                dark:text-gray-200
+                                dark:hover:bg-gray-800
+                            "
+                        >
+                            Twitter
+                        </button>
+
+                        <button
+                            className="
+                                rounded-xl
+                                border
+                                border-gray-300
+                                bg-white
+                                px-5
+                                py-2
+                                text-gray-800
+                                transition
+                                hover:bg-gray-100
+                                dark:border-gray-700
+                                dark:bg-gray-900
+                                dark:text-gray-200
+                                dark:hover:bg-gray-800
+                            "
+                        >
+                            Website
+                        </button>
+
+                    </div>
+
+                    {/* Contact Information */}
+                    <div
+                        className="
+                            mt-8
+                            flex
+                            flex-wrap
+                            gap-x-6
+                            gap-y-3
+                            text-sm
+                            text-gray-500
+                            dark:text-gray-400
+                        "
+                    >
+
+                        <div>
+                            📧{" "}
+                            <span>
+                                manikanthreddykandadi583@gmail.com
+                            </span>
+                        </div>
+
+                        <div>
+                            📍 <span>Hyderabad, India</span>
+                        </div>
+
+                        <div>
+                            ✅ <span>open</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                {/* RIGHT SIDE - IMAGE */}
+                <div
+                    className="
+                        relative
+                        w-full
+                        lg:w-1/2
+                        flex
+                        justify-center
+                        lg:justify-end
+                    "
+                >
+
+                    <div
+                        className="
+                            relative
+                            w-full
+                            max-w-[600px]
+                            overflow-hidden
+                            rounded-2xl
+                            border-4
+                            border-gray-300
+                            bg-gray-100
+                            shadow-sm
+                            dark:border-gray-700
+                            dark:bg-gray-900
+                        "
+                    >
+
+                        {/* Profile Image */}
+                        <img
+                            src={img}
+                            alt="Manikanth Reddy"
+                            className="
+                                w-full
+                                h-[500px]
+                                sm:h-[600px]
+                                object-cover
+                                object-center
+                            "
+                        />
+
+                        {/* Online Badge */}
+                        <div
+                            className="
+                                absolute
+                                top-5
+                                right-5
+                                rounded-full
+                                bg-black/80
+                                px-2
+                                py-1
+                                text-xs
+                                font-medium
+                                text-white
+                                backdrop-blur-sm
+                            "
+                        >
+                            🟢 Online
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
     );
 }
