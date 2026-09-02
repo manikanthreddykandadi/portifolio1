@@ -1,20 +1,19 @@
+
 function Education() {
   return (
     <section
       id="education"
       className="
         bg-white
-        py-5
         px-3
+        py-5
         text-gray-900
         dark:bg-gray-950
         dark:text-white
       "
     >
-
       {/* Section Heading */}
       <div className="mb-10">
-
         <h2
           className="
             mt-2
@@ -37,6 +36,7 @@ function Education() {
             items-center
             justify-center
             pt-3
+            text-center
             text-xl
             text-gray-500
             dark:text-gray-400
@@ -44,15 +44,14 @@ function Education() {
         >
           My academic background
         </div>
-
       </div>
-
 
       {/* Education Card */}
       <div
         className="
           relative
-          mx-40
+          mx-3
+          w-auto
           max-w-xl
           overflow-hidden
           rounded-2xl
@@ -60,11 +59,13 @@ function Education() {
           border-gray-200
           bg-white
           shadow-sm
+          sm:mx-6
+          md:mx-12
+          lg:mx-40
           dark:border-gray-700
           dark:bg-gray-900
         "
       >
-
         {/* Top Line */}
         <div
           className="
@@ -74,9 +75,7 @@ function Education() {
           "
         />
 
-
         <div className="p-5 md:p-5">
-
           {/* Degree */}
           <h3
             className="
@@ -89,7 +88,6 @@ function Education() {
           >
             Bachelor of Technology
           </h3>
-
 
           {/* Branch */}
           <h4
@@ -104,7 +102,6 @@ function Education() {
             Computer Science & Engineering
           </h4>
 
-
           {/* College */}
           <p
             className="
@@ -117,10 +114,8 @@ function Education() {
             Brilliant Group Of Technical Institutions
           </p>
 
-
           {/* Information Pills */}
           <div className="mt-7 flex flex-wrap gap-4">
-
             {/* Duration */}
             <div
               className="
@@ -149,7 +144,6 @@ function Education() {
               </span>
             </div>
 
-
             {/* CGPA */}
             <div
               className="
@@ -177,9 +171,7 @@ function Education() {
                 CGPA: 6.5/10
               </span>
             </div>
-
           </div>
-
 
           {/* Description */}
           <p
@@ -197,27 +189,26 @@ function Education() {
             practical applications and learning modern technologies.
           </p>
 
-
           {/* Achievements */}
           <div
             className="
               mt-8
               rounded-2xl
               bg-gray-50
-              p-6
+              p-5
               md:p-8
               dark:bg-gray-800
             "
           >
-
             <h4
               className="
                 flex
-                items-center
+                items-start
                 gap-3
                 text-xl
                 font-semibold
                 text-gray-900
+                md:items-center
                 md:text-2xl
                 dark:text-white
               "
@@ -226,9 +217,10 @@ function Education() {
                 🏆
               </span>
 
-              Achievements & Activities
+              <span>
+                Achievements & Activities
+              </span>
             </h4>
-
 
             <ul
               className="
@@ -239,9 +231,8 @@ function Education() {
                 dark:text-gray-400
               "
             >
-
               <li className="flex gap-3">
-                <span className="text-gray-900 dark:text-gray-300">
+                <span className="shrink-0 text-gray-900 dark:text-gray-300">
                   ▸
                 </span>
 
@@ -251,9 +242,8 @@ function Education() {
                 </span>
               </li>
 
-
               <li className="flex gap-3">
-                <span className="text-gray-900 dark:text-gray-300">
+                <span className="shrink-0 text-gray-900 dark:text-gray-300">
                   ▸
                 </span>
 
@@ -262,9 +252,8 @@ function Education() {
                 </span>
               </li>
 
-
               <li className="flex gap-3">
-                <span className="text-gray-900 dark:text-gray-300">
+                <span className="shrink-0 text-gray-900 dark:text-gray-300">
                   ▸
                 </span>
 
@@ -274,9 +263,8 @@ function Education() {
                 </span>
               </li>
 
-
               <li className="flex gap-3">
-                <span className="text-gray-900 dark:text-gray-300">
+                <span className="shrink-0 text-gray-900 dark:text-gray-300">
                   ▸
                 </span>
 
@@ -286,9 +274,8 @@ function Education() {
                 </span>
               </li>
 
-
               <li className="flex gap-3">
-                <span className="text-gray-900 dark:text-gray-300">
+                <span className="shrink-0 text-gray-900 dark:text-gray-300">
                   ▸
                 </span>
 
@@ -297,15 +284,10 @@ function Education() {
                   technologies
                 </span>
               </li>
-
             </ul>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }
