@@ -1,4 +1,3 @@
-
 function Education() {
   return (
     <section

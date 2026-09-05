@@ -1,3 +1,4 @@
+
 const achievements = [
   {
     type: "Milestone",
@@ -8,7 +9,11 @@ const achievements = [
       "Solved 70+ problems on LeetCode, demonstrating strong algorithmic thinking and problem-solving abilities across various difficulty levels.",
     typeStyle:
       "bg-pink-50 text-pink-500 dark:bg-pink-500/10 dark:text-pink-400",
+
+    // Put your real LeetCode profile URL here
+    link: "https://leetcode.com/",
   },
+
   {
     type: "Recognition",
     date: "January 2024",
@@ -16,9 +21,14 @@ const achievements = [
     organization: "GeeksForGeeks",
     description:
       "Achieved Rank 8 in GeeksForGeeks Practice in my institution, solving over 200 DSA problems and demonstrating strong problem-solving skills.",
+
     typeStyle:
       "bg-cyan-50 text-cyan-500 dark:bg-cyan-500/10 dark:text-cyan-400",
+
+    // Put your real GeeksForGeeks profile URL here
+    link: "https://www.geeksforgeeks.org/",
   },
+
   {
     type: "Recognition",
     date: "December 2023",
@@ -26,9 +36,13 @@ const achievements = [
     organization: "GeeksForGeeks",
     description:
       "Received Goodies for doing Problem of the Day (POTD) consistently over 120 days, demonstrating dedication to continuous learning and problem-solving.",
+
     typeStyle:
       "bg-cyan-50 text-cyan-500 dark:bg-cyan-500/10 dark:text-cyan-400",
+
+    link: "https://www.geeksforgeeks.org/",
   },
+
   {
     type: "Achievement",
     date: "September 2023",
@@ -36,9 +50,13 @@ const achievements = [
     organization: "Google Developer Student Club",
     description:
       "Led a vibrant 5-day college boot camp initiated by students, dedicated to educating and guiding fellow peers and juniors through immersive education and mentorship.",
+
     typeStyle:
       "bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-300",
+
+    link: "https://developers.google.com/community/gdsc",
   },
+
   {
     type: "Open Source",
     date: "October 2022",
@@ -46,8 +64,11 @@ const achievements = [
     organization: "DigitalOcean",
     description:
       "Successfully contributed to Hacktoberfest 2022, earning badges and contributing to open-source projects while learning new technologies.",
+
     typeStyle:
       "bg-orange-50 text-orange-500 dark:bg-orange-500/10 dark:text-orange-400",
+
+    link: "https://hacktoberfest.com/",
   },
 ];
 
@@ -71,7 +92,6 @@ function Achievements() {
 
         {/* Section Heading */}
         <div className="mb-20 text-center">
-
           <h2
             className="
               text-3xl
@@ -100,13 +120,10 @@ function Achievements() {
           >
             Milestones and recognitions
           </p>
-
         </div>
 
-
-        {/* Featured Achievements Heading */}
+        {/* Featured Achievements */}
         <div className="mb-5 flex items-center gap-3">
-
           <span className="text-3xl text-yellow-500">
             ★
           </span>
@@ -124,9 +141,7 @@ function Achievements() {
           >
             Featured Achievements
           </h3>
-
         </div>
-
 
         {/* Achievement Cards */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -145,7 +160,6 @@ function Achievements() {
                 hover:-translate-y-1
                 hover:shadow-lg
                 sm:p-8
-
                 dark:border-slate-800
                 dark:bg-slate-900
                 dark:hover:border-slate-700
@@ -183,7 +197,6 @@ function Achievements() {
 
               </div>
 
-
               {/* Title */}
               <h4
                 className="
@@ -200,7 +213,6 @@ function Achievements() {
                 {achievement.title}
               </h4>
 
-
               {/* Organization */}
               <p
                 className="
@@ -215,7 +227,6 @@ function Achievements() {
               >
                 {achievement.organization}
               </p>
-
 
               {/* Description */}
               <p
@@ -234,10 +245,12 @@ function Achievements() {
                 {achievement.description}
               </p>
 
+              {/* ================= LEARN MORE ================= */}
 
-              {/* Learn More */}
-              <button
-                type="button"
+              <a
+                href={achievement.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="
                   mt-5
                   inline-flex
@@ -255,19 +268,26 @@ function Achievements() {
               >
                 Learn More
 
-                <span className="text-sm">
+                <span
+                  className="
+                    text-sm
+                    transition-transform
+                    duration-200
+                    group-hover:translate-x-1
+                  "
+                >
                   ↗
                 </span>
-              </button>
+              </a>
 
             </div>
           ))}
 
         </div>
-
       </div>
     </section>
   );
 }
 
 export default Achievements;
+

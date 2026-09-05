@@ -7,6 +7,7 @@ function Learning() {
       description:
         "Approaches I use to create reusable React components, maintain clean application structure and build responsive user interfaces.",
       technologies: ["React", "TypeScript", "Tailwind CSS"],
+      link: "#skills",
     },
     {
       number: "02",
@@ -15,6 +16,7 @@ function Learning() {
       description:
         "Practical approaches to creating backend APIs, handling requests and connecting frontend applications with server-side services.",
       technologies: ["Node.js", "Express.js", "REST API"],
+      link: "#projects",
     },
     {
       number: "03",
@@ -23,6 +25,7 @@ function Learning() {
       description:
         "Understanding how applications store, retrieve and manage data efficiently using both relational and NoSQL databases.",
       technologies: ["MongoDB", "MySQL"],
+      link: "#projects",
     },
     {
       number: "04",
@@ -31,6 +34,7 @@ function Learning() {
       description:
         "Techniques I use to build interfaces that remain clean, accessible and consistent across different screen sizes.",
       technologies: ["HTML", "CSS", "Tailwind CSS"],
+      link: "#skills",
     },
     {
       number: "05",
@@ -39,6 +43,7 @@ function Learning() {
       description:
         "Exploring practical ways to combine machine learning and application development to solve real-world problems.",
       technologies: ["Python", "CNN", "Machine Learning"],
+      link: "#projects",
     },
   ];
 
@@ -506,32 +511,33 @@ function Learning() {
                   </span>
 
 
-                  <span
+                  <a
+                    href={insight.link}
+                    aria-label={`Learn more about ${insight.title}`}
                     className="
-                      flex
-                      h-7
-                      w-7
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-gray-200
-                      text-xs
-                      text-gray-600
-                      transition-all
-                      duration-300
-                      group-hover:translate-x-1
-                      group-hover:bg-gray-900
-                      group-hover:text-white
-
-                      dark:border-slate-700
-                      dark:text-slate-400
-                      dark:group-hover:bg-white
-                      dark:group-hover:text-gray-900
-                    "
+                    flex
+                    h-8
+                    w-8
+                   items-center
+                   justify-center
+                   rounded-full
+                   border
+                   border-gray-200
+                   text-sm
+                   text-gray-600
+                   transition-all
+                   duration-300
+                   hover:translate-x-1
+                   hover:bg-gray-900
+                   hover:text-white
+                   dark:border-slate-700
+                   dark:text-slate-400
+                   dark:hover:bg-white
+                   dark:hover:text-gray-900
+                   "
                   >
                     →
-                  </span>
+                  </a>
 
                 </div>
 

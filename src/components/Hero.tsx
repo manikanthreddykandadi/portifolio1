@@ -2,8 +2,8 @@ import img from "../assets/mani.png";
 
 function Hero() {
     return (
-        <section 
-        id="home"
+        <section
+            id="home"
             className="
                 relative
                 min-h-screen
@@ -121,96 +121,123 @@ function Hero() {
                             dark:text-gray-400
                         "
                     >
-                        Passionate full-stack developer with 1+ years of
-                        experience building corporate solutions and web
-                        applications. Specialized in React, Node.js, and
-                        modern web technologies with expertise in AI
-                        integration and real-time systems.
+                        I'm a Computer Science & Engineering graduate and passionate web developer. I enjoy building responsive, user-friendly web applications and learning modern technologies. I have completed projects including an E-commerce website and my personal Portfolio website.
+
+                        Status:
                     </p>
 
                     {/* Social Buttons */}
                     <div className="mt-8 flex flex-wrap gap-4">
 
-                        <button
+                        <a
+                            href="https://github.com/manikanthreddy"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="
-                                rounded-xl
-                                border
-                                border-gray-300
-                                bg-white
-                                px-5
-                                py-2
-                                text-gray-800
-                                transition
-                                hover:bg-gray-100
-                                dark:border-gray-700
-                                dark:bg-gray-900
-                                dark:text-gray-200
-                                dark:hover:bg-gray-800
-                            "
+    inline-block
+    rounded-xl
+    border
+    border-gray-300
+    bg-white
+    px-5
+    py-2
+    text-gray-800
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:bg-gray-100
+    hover:shadow-md
+    dark:border-gray-700
+    dark:bg-gray-900
+    dark:text-gray-200
+    dark:hover:bg-gray-800
+  "
                         >
                             GitHub
-                        </button>
+                        </a>
 
-                        <button
+                        <a
+                            href="https://www.linkedin.com/in/your-username/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="
-                                rounded-xl
-                                border
-                                border-gray-300
-                                bg-white
-                                px-5
-                                py-2
-                                text-gray-800
-                                transition
-                                hover:bg-gray-100
-                                dark:border-gray-700
-                                dark:bg-gray-900
-                                dark:text-gray-200
-                                dark:hover:bg-gray-800
-                            "
+        inline-block
+        rounded-xl
+        border
+        border-gray-300
+        bg-white
+        px-5
+        py-2
+        text-gray-800
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:bg-gray-100
+        hover:shadow-md
+        dark:border-gray-700
+        dark:bg-gray-900
+        dark:text-gray-200
+        dark:hover:bg-gray-800
+    "
                         >
                             LinkedIn
-                        </button>
+                        </a>
 
-                        <button
+                        <a
+                            href="https://twitter.com/your-username"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="
-                                rounded-xl
-                                border
-                                border-gray-300
-                                bg-white
-                                px-5
-                                py-2
-                                text-gray-800
-                                transition
-                                hover:bg-gray-100
-                                dark:border-gray-700
-                                dark:bg-gray-900
-                                dark:text-gray-200
-                                dark:hover:bg-gray-800
-                            "
+        inline-block
+        rounded-xl
+        border
+        border-gray-300
+        bg-white
+        px-5
+        py-2
+        text-gray-800
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:bg-gray-100
+        hover:shadow-md
+        dark:border-gray-700
+        dark:bg-gray-900
+        dark:text-gray-200
+        dark:hover:bg-gray-800
+    "
                         >
                             Twitter
-                        </button>
+                        </a>
 
-                        <button
+
+
+                        <a
+                            href="manikanthreddy.netlify.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="
-                                rounded-xl
-                                border
-                                border-gray-300
-                                bg-white
-                                px-5
-                                py-2
-                                text-gray-800
-                                transition
-                                hover:bg-gray-100
-                                dark:border-gray-700
-                                dark:bg-gray-900
-                                dark:text-gray-200
-                                dark:hover:bg-gray-800
-                            "
+    inline-block
+    rounded-xl
+    border
+    border-gray-300
+    bg-white
+    px-5
+    py-2
+    text-gray-800
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:bg-gray-100
+    hover:shadow-md
+    dark:border-gray-700
+    dark:bg-gray-900
+    dark:text-gray-200
+    dark:hover:bg-gray-800
+  "
                         >
                             Website
-                        </button>
-
+                        </a>
                     </div>
 
                     {/* Contact Information */}

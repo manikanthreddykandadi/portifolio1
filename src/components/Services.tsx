@@ -1,47 +1,53 @@
 
 function Services() {
+  
   const services = [
-    {
-      number: "01",
-      title: "Frontend Development",
-      description:
-        "Building clean, responsive and interactive interfaces with modern frontend technologies.",
-      features: ["React", "TypeScript", "Tailwind CSS", "Responsive UI"],
-      icon: "</>",
-    },
-    {
-      number: "02",
-      title: "Full-Stack Development",
-      description:
-        "Creating complete web applications with frontend interfaces, backend APIs and database integration.",
-      features: ["Node.js", "Express.js", "REST APIs", "MongoDB / MySQL"],
-      icon: "⌘",
-    },
-    {
-      number: "03",
-      title: "AI & Machine Learning",
-      description:
-        "Exploring practical AI and machine learning solutions for real-world applications.",
-      features: ["Python", "CNN", "Computer Vision", "ML Projects"],
-      icon: "✦",
-    },
-    {
-      number: "04",
-      title: "Responsive UI",
-      description:
-        "Designing interfaces that work smoothly across desktop, tablet and mobile devices.",
-      features: ["Mobile First", "Modern UI", "Accessibility", "Cross Device"],
-      icon: "◈",
-    },
-    {
-      number: "05",
-      title: "API & Database",
-      description:
-        "Connecting applications with APIs and databases to create functional data-driven experiences.",
-      features: ["REST API", "API Integration", "MongoDB", "MySQL"],
-      icon: "⌁",
-    },
-  ];
+  {
+    number: "01",
+    title: "Frontend Development",
+    description:
+      "Building clean, responsive and interactive interfaces with modern frontend technologies.",
+    features: ["React", "TypeScript", "Tailwind CSS", "Responsive UI"],
+    icon: "</>",
+    link: "#skills",
+  },
+  {
+    number: "02",
+    title: "Full-Stack Development",
+    description:
+      "Creating complete web applications with frontend interfaces, backend APIs and database integration.",
+    features: ["Node.js", "Express.js", "REST APIs", "MongoDB / MySQL"],
+    icon: "⌘",
+    link: "#projects",
+  },
+  {
+    number: "03",
+    title: "AI & Machine Learning",
+    description:
+      "Exploring practical AI and machine learning solutions for real-world applications.",
+    features: ["Python", "CNN", "Computer Vision", "ML Projects"],
+    icon: "✦",
+    link: "#projects",
+  },
+  {
+    number: "04",
+    title: "Responsive UI",
+    description:
+      "Designing interfaces that work smoothly across desktop, tablet and mobile devices.",
+    features: ["Mobile First", "Modern UI", "Accessibility", "Cross Device"],
+    icon: "◈",
+    link: "#projects",
+  },
+  {
+    number: "05",
+    title: "API & Database",
+    description:
+      "Connecting applications with APIs and databases to create functional data-driven experiences.",
+    features: ["REST API", "API Integration", "MongoDB", "MySQL"],
+    icon: "⌁",
+    link: "#projects",
+  },
+];
 
   return (
     <section
@@ -192,10 +198,9 @@ function Services() {
                 dark:hover:border-slate-700
                 dark:hover:bg-slate-900
                 dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.25)]
-                ${
-                  index === 4
-                    ? "sm:col-span-2 lg:col-span-1"
-                    : ""
+                ${index === 4
+                  ? "sm:col-span-2 lg:col-span-1"
+                  : ""
                 }
               `}
             >
@@ -367,31 +372,35 @@ function Services() {
                   Explore my skills
                 </span>
 
-                <span
-                  className="
-                    flex
-                    h-8
-                    w-8
-                    items-center
-                    justify-center
-                    rounded-full
-                    border
-                    border-gray-200
-                    text-sm
-                    text-gray-700
-                    transition-all
-                    duration-300
-                    group-hover:translate-x-1
-                    group-hover:bg-gray-900
-                    group-hover:text-white
-                    dark:border-slate-700
-                    dark:text-slate-300
-                    dark:group-hover:bg-white
-                    dark:group-hover:text-gray-900
-                  "
-                >
-                  →
-                </span>
+                <a
+  href={service.link}
+  aria-label={`Explore ${service.title}`}
+  className="
+    group/arrow
+    flex
+    h-9
+    w-9
+    items-center
+    justify-center
+    rounded-full
+    border
+    border-gray-200
+    text-gray-700
+    transition-all
+    duration-300
+    hover:translate-x-1
+    hover:bg-gray-900
+    hover:text-white
+    dark:border-slate-700
+    dark:text-slate-300
+    dark:hover:bg-white
+    dark:hover:text-gray-900
+  "
+>
+  <span className="text-lg transition-transform duration-300 group-hover/arrow:translate-x-0.5">
+    →
+  </span>
+</a>
               </div>
             </article>
           ))}

@@ -5,243 +5,212 @@ function About() {
             className="
                 w-full
                 bg-white
+                px-6
+                py-20
                 text-gray-900
                 dark:bg-gray-950
                 dark:text-white
+                lg:px-12
             "
         >
-            <div className="pt-4 w-full max-w-[1000px] mx-auto px-6">
+            <div className="mx-auto max-w-6xl">
 
-                {/* Main About Content */}
-                <div
-                    className="
-                        pt-4
-                        w-full
-                        max-w-[1100px]
-                        mx-auto
-                        px-6
-                        border-b
-                        border-gray-200
-                        pb-20
-                        dark:border-gray-800
-                    "
-                >
-
-                    {/* Heading */}
-                    <h1
+                {/* ================= HEADER ================= */}
+                <div className="text-center">
+                    <h2
                         className="
-                            flex
-                            text-5xl
+                            text-4xl
                             font-bold
-                            justify-center
-                            items-center
-                            text-gray-900
-                            dark:text-white
+                            sm:text-5xl
                         "
                     >
                         About Me
-                    </h1>
+                    </h2>
 
-                    {/* Subtitle */}
-                    <div
+                    <p
                         className="
-                            flex
-                            justify-center
-                            items-center
-                            text-xl
-                            pt-4
+                            mt-4
+                            text-lg
                             text-gray-500
                             dark:text-gray-400
                         "
                     >
                         Get to know me better
-                    </div>
-
-                    {/* About Text */}
-                    <div
-                        className="
-                            text-lg
-                            leading-8
-                            pt-4
-                            text-gray-500
-                            dark:text-gray-400
-                        "
-                    >
-
-                        <div className="pb-5">
-                            I'm a passionate full-stack developer with over
-                            1 year of experience crafting elegant solutions
-                            to complex problems. My journey in tech began
-                            with a fascination for how things work, which
-                            led me to pursue Computer Science Engineering
-                            and eventually specialize in web development
-                            and software engineering.
-                        </div>
-
-                        <div className="pb-5">
-                            <span
-                                className="
-                                    font-bold
-                                    text-gray-900
-                                    dark:text-white
-                                "
-                            >
-                                My Approach:
-                            </span>{" "}
-                            I believe in writing clean, maintainable code
-                            that scales. I'm a strong advocate for modern
-                            development practices and continuous learning.
-                            My experience spans from corporate solutions
-                            to personal projects, giving me a unique
-                            perspective on different development
-                            methodologies and best practices.
-                        </div>
-
-                        <div className="pb-5">
-                            <span
-                                className="
-                                    font-bold
-                                    text-gray-900
-                                    dark:text-white
-                                "
-                            >
-                                What I Do:
-                            </span>{" "}
-                            I specialize in building full-stack applications
-                            using React, Next.js, and Node.js. Recently, I've
-                            been focusing on integrating AI capabilities into
-                            web applications, leveraging technologies like
-                            OpenAI and LangChain. I'm also experienced in
-                            real-time systems using WebSockets and data
-                            visualization with D3.js.
-                        </div>
-
-                        <div>
-                            When I'm not coding, you can find me contributing
-                            to open-source projects, solving DSA problems on
-                            GeeksForGeeks and LeetCode, or mentoring fellow
-                            developers. I'm always excited to learn new
-                            technologies and share knowledge with the community.
-                        </div>
-
-                    </div>
-
+                    </p>
                 </div>
 
-
-                {/* Statistics */}
+                {/* ================= ABOUT CONTENT ================= */}
                 <div
                     className="
-                        pt-20
-                        flex
-                        flex-wrap
-                        justify-between
-                        gap-10
-                        pb-5
+                        mx-auto
+                        mt-14
+                        max-w-5xl
+                        space-y-6
+                        text-lg
+                        leading-8
+                        text-gray-600
+                        dark:text-gray-300
+                    "
+                >
+                    <p>
+                        I'm a passionate Computer Science & Engineering
+                        graduate with a strong interest in web development.
+                        I enjoy turning ideas into functional, user-friendly
+                        web applications and continuously improving my
+                        programming skills.
+                    </p>
+
+                    <p>
+                        <strong className="text-gray-900 dark:text-white">
+                            My Approach:
+                        </strong>{" "}
+                        I believe in writing clean, understandable code and
+                        learning through hands-on projects. Building real
+                        projects has helped me strengthen my understanding of
+                        frontend development, responsive design, and modern
+                        web technologies.
+                    </p>
+
+                    <p>
+                        <strong className="text-gray-900 dark:text-white">
+                            What I Do:
+                        </strong>{" "}
+                        I enjoy building web applications using technologies
+                        such as React, JavaScript, TypeScript, Tailwind CSS,
+                        and Node.js. I have completed projects including an
+                        E-commerce website and my personal Portfolio website.
+                    </p>
+
+                    <p>
+                        <strong className="text-gray-900 dark:text-white">
+                            Currently:
+                        </strong>{" "}
+                        I'm looking for an opportunity as a fresher where I
+                        can apply my skills, learn from experienced developers,
+                        and grow as a software developer.
+                    </p>
+                </div>
+
+                {/* ================= DIVIDER ================= */}
+                <div
+                    className="
+                        my-14
+                        h-px
+                        w-full
+                        bg-gray-200
+                        dark:bg-gray-800
+                    "
+                />
+
+                {/* ================= STATISTICS ================= */}
+                <div
+                    className="
+                        grid
+                        grid-cols-2
+                        gap-8
+                        text-center
+                        md:grid-cols-4
                     "
                 >
 
-                    {/* Projects */}
+                    {/* STAT 1 */}
                     <div>
-                        <div
+                        <h3
                             className="
-                                text-3xl
+                                text-4xl
                                 font-bold
-                                pb-2
                                 text-gray-900
                                 dark:text-white
                             "
                         >
-                            10+
-                        </div>
+                            3
+                        </h3>
 
-                        <div
+                        <p
                             className="
+                                mt-2
                                 text-sm
                                 text-gray-500
                                 dark:text-gray-400
                             "
                         >
                             Projects Completed
-                        </div>
+                        </p>
                     </div>
 
-
-                    {/* DSA */}
+                    {/* STAT 2 */}
                     <div>
-                        <div
+                        <h3
                             className="
-                                text-3xl
+                                text-4xl
                                 font-bold
-                                pb-2
                                 text-gray-900
                                 dark:text-white
                             "
                         >
-                            270+
-                        </div>
+                            5+
+                        </h3>
 
-                        <div
+                        <p
                             className="
+                                mt-2
                                 text-sm
                                 text-gray-500
                                 dark:text-gray-400
                             "
                         >
-                            DSA Problems Solved
-                        </div>
+                            Technologies Used
+                        </p>
                     </div>
 
-
-                    {/* Experience */}
+                    {/* STAT 3 */}
                     <div>
-                        <div
+                        <h3
                             className="
-                                text-3xl
+                                text-4xl
                                 font-bold
-                                pb-2
                                 text-gray-900
                                 dark:text-white
                             "
                         >
-                            1+
-                        </div>
+                            1
+                        </h3>
 
-                        <div
+                        <p
                             className="
+                                mt-2
                                 text-sm
                                 text-gray-500
                                 dark:text-gray-400
                             "
                         >
-                            Years Experience
-                        </div>
+                            E-commerce Website
+                        </p>
                     </div>
 
-
-                    {/* Technologies */}
+                    {/* STAT 4 */}
                     <div>
-                        <div
+                        <h3
                             className="
-                                text-3xl
+                                text-4xl
                                 font-bold
-                                pb-2
                                 text-gray-900
                                 dark:text-white
                             "
                         >
-                            15+
-                        </div>
+                            2
+                        </h3>
 
-                        <div
+                        <p
                             className="
+                                mt-2
                                 text-sm
                                 text-gray-500
                                 dark:text-gray-400
                             "
                         >
-                            Technologies Mastered
-                        </div>
+                            Portfolio Website
+                        </p>
                     </div>
 
                 </div>

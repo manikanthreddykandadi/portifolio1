@@ -12,31 +12,31 @@ const projects: Project[] = [
     category: "web-app",
     title: "MyBlogs",
     description:
-      "End-to-end website for publishing blog posts with user authentication",
+        "A blog website where users can create, publish, and manage blog posts with authentication.",
     technologies: [
-      "React",
-      "Tailwind CSS",
-      "Node.js",
-      "MongoDB",
-      "+1",
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "MongoDB",
+        "+1",
     ],
     liveLink: "#",
-    githubLink: "#",
-  },
+    githubLink: "https://github.com/manikanthreddy",
+},
 
-  {
+ {
     category: "web-app",
     title: "Portfolio Website",
     description:
-      "Dynamic personal portfolio using Next.js and Tailwind CSS to showcase skills and achievements",
+        "Personal portfolio website showcasing my skills, projects, education, and achievements.",
     technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
     ],
-    liveLink: "#",
+    liveLink: "https://manikanthreddy.netlify.app",
     githubLink: "#",
-  },
+},
 
   {
     category: "web-app",
