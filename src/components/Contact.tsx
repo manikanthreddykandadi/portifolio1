@@ -22,22 +22,20 @@ function Contact() {
       return;
     }
 
-    // Your email address
     const myEmail = "manikanthreddykandadi583@gmail.com";
 
     // Encode subject and message
-    const encodedSubject = encodeURIComponent(subject);
-    const encodedMessage = encodeURIComponent(message);
+    const encodedSubject = encodeURIComponent(subject.trim());
+    const encodedMessage = encodeURIComponent(message.trim());
 
-    // Gmail compose URL
-    const gmailUrl =
-      `https://mail.google.com/mail/?view=cm&fs=1` +
-      `&to=${myEmail}` +
-      `&su=${encodedSubject}` +
+    // mailto opens the user's default email app
+    const mailtoUrl =
+      `mailto:${myEmail}` +
+      `?subject=${encodedSubject}` +
       `&body=${encodedMessage}`;
 
-    // Open Gmail
-    window.open(gmailUrl, "_blank");
+    // Open email app
+    window.location.href = mailtoUrl;
 
     // Clear form
     setSubject("");
@@ -61,7 +59,7 @@ function Contact() {
     >
       <div className="mx-auto max-w-4xl">
 
-        {/* Heading */}
+        {/* ================= HEADER ================= */}
         <div className="mb-12 text-center">
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Get In Touch
@@ -72,9 +70,18 @@ function Contact() {
           </p>
         </div>
 
-        {/* Form */}
-        <Card className="mx-auto w-full max-w-2xl border-gray-200 dark:border-slate-800 dark:bg-slate-900">
-          
+        {/* ================= FORM CARD ================= */}
+        <Card
+          className="
+            mx-auto
+            w-full
+            max-w-2xl
+            border-gray-200
+            bg-white
+            dark:border-slate-800
+            dark:bg-slate-900
+          "
+        >
           <CardHeader>
             <CardTitle className="text-2xl">
               Send a Message
@@ -82,13 +89,12 @@ function Contact() {
           </CardHeader>
 
           <CardContent>
-
             <form
               onSubmit={handleSubmit}
               className="space-y-6"
             >
 
-              {/* Subject */}
+              {/* ================= SUBJECT ================= */}
               <div className="space-y-2">
                 <Label htmlFor="subject">
                   Subject
@@ -104,7 +110,7 @@ function Contact() {
                 />
               </div>
 
-              {/* Message */}
+              {/* ================= MESSAGE ================= */}
               <div className="space-y-2">
                 <Label htmlFor="message">
                   Message
@@ -120,18 +126,27 @@ function Contact() {
                 />
               </div>
 
-              {/* Submit */}
+              {/* ================= SEND BUTTON ================= */}
               <Button
                 type="submit"
-                className="w-full"
+                className="
+                  w-full
+                  transition-all
+                  duration-200
+                  hover:scale-[1.01]
+                "
               >
                 Send Message →
               </Button>
 
             </form>
-
           </CardContent>
         </Card>
+
+        {/* ================= EMAIL INFO ================= */}
+        <p className="mt-6 text-center text-sm text-gray-500 dark:text-slate-400">
+          Clicking "Send Message" will open your email application.
+        </p>
 
       </div>
     </section>
@@ -139,4 +154,3 @@ function Contact() {
 }
 
 export default Contact;
-
